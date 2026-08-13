@@ -95,7 +95,7 @@ function YardPage() {
         image={yardAerial}
         imageAlt="Aerial view of a trailer yard with digital tracking overlay"
         metrics={[
-          { label: "Location", value: "Avenel, NJ" },
+          { label: "Location", value: "Carteret, NJ" },
           { label: "Asset Tracking", value: "Real-Time Yard" },
           { label: "Port Access", value: "Port Newark" },
         ]}

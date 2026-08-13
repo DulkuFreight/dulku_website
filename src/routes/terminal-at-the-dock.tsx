@@ -95,7 +95,7 @@ function DockPage() {
         image={dockDoors}
         imageAlt="Warehouse dock doors at night"
         metrics={[
-          { label: "Location", value: "Avenel, NJ" },
+          { label: "Location", value: "Carteret, NJ" },
           { label: "Operations", value: "Dock Management" },
           { label: "Port Access", value: "Port Newark" },
         ]}
@@ -117,7 +117,7 @@ function DockPage() {
       <InteractiveRelatedServices currentPath="/terminal-at-the-dock" />
       <SubpageCtaSection
         title="Talk to a Dock Operations Expert"
-        subtitle="Contact our Avenel, NJ team to optimize your dock doors and yard execution."
+        subtitle="Contact our Carteret, NJ team to optimize your dock doors and yard execution."
       />
     </main>
   );

@@ -110,7 +110,7 @@ function YosPage() {
         image={networkOps}
         imageAlt="Connected logistics network visualization"
         metrics={[
-          { label: "Location", value: "Avenel, NJ" },
+          { label: "Location", value: "Carteret, NJ" },
           { label: "System", value: "Yard Operations" },
           { label: "Port Access", value: "Port Newark" },
         ]}

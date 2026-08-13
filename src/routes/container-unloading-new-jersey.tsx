@@ -14,7 +14,7 @@ import { Box, Layers, CheckCircle2, Zap, BarChart3, Truck } from "lucide-react";
 
 const TITLE = "Container Unloading & Stripping New Jersey | Dulku Freight";
 const DESCRIPTION =
-  "Professional ocean container unloading, floor-loaded cargo stripping, palletizing, shrink wrapping, and sorting in Avenel, NJ near Port Newark.";
+  "Professional ocean container unloading, floor-loaded cargo stripping, palletizing, shrink wrapping, and sorting in Carteret, NJ near Port Newark.";
 const OG_IMAGE = "/og-image.png?v=1";
 
 export const Route = createFileRoute("/container-unloading-new-jersey")({
@@ -40,7 +40,7 @@ function ContainerUnloadingPage() {
       title: "Ocean Container Gate-In",
       badge: "RECEIVING",
       description:
-        "Drayage truck delivers 20ft, 40ft, or 45ft ocean containers from Port Newark to our Avenel, NJ terminal.",
+        "Drayage truck delivers 20ft, 40ft, or 45ft ocean containers from Port Newark to our Carteret, NJ terminal.",
       details: [
         "Inbound seal and container verification",
         "Efficient dock door assignment",
@@ -128,13 +128,13 @@ function ContainerUnloadingPage() {
     <main className="min-h-screen bg-[#09090b]">
       {/* Immersive Subpage Hero */}
       <SubpageHero
-        eyebrow="AVENEL, NJ OCEAN CONTAINER STRIPPING NEAR PORT NEWARK"
+        eyebrow="CARTERET, NJ OCEAN CONTAINER STRIPPING NEAR PORT NEWARK"
         title="Container Unloading, De-stuffing & Palletizing in New Jersey"
         subtitle="Fast, precise container devanning and floor-loaded cargo unloading. Dulku Freight handles 20ft, 40ft, and 45ft import containers from Port Newark with professional palletizing, sorting, and inventory count audits."
         image={containerUnloadingHero}
         imageAlt="Dulku Freight Container Unloading Facility in New Jersey"
         metrics={[
-          { label: "Location", value: "Avenel, NJ" },
+          { label: "Location", value: "Carteret, NJ" },
           { label: "Equipment", value: "20/40/45 FT" },
           { label: "Port Corridor", value: "Port Newark" },
         ]}
@@ -167,7 +167,7 @@ function ContainerUnloadingPage() {
       <InteractiveProcessSection
         eyebrow="DEVANNED WORKFLOW"
         title="Our Unloading & Palletizing Workflow"
-        subtitle="From container arrival at our Avenel depot to final audit dispatch, every carton is accounted for."
+        subtitle="From container arrival at our Carteret depot to final audit dispatch, every carton is accounted for."
         steps={steps}
       />
 
@@ -187,7 +187,7 @@ function ContainerUnloadingPage() {
       {/* CTA */}
       <SubpageCtaSection
         title="Book Container Unloading Services Today"
-        subtitle="Schedule your container arrival or request a transparent per-container stripping quote from our Avenel, NJ operations team."
+        subtitle="Schedule your container arrival or request a transparent per-container stripping quote from our Carteret, NJ operations team."
       />
     </main>
   );

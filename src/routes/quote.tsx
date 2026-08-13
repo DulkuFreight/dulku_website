@@ -5,7 +5,7 @@ import { Mail, MapPin, Zap } from "lucide-react";
 
 const TITLE = "Get a Freight & Warehousing Quote | Dulku Freight";
 const DESCRIPTION =
-  "Request a fast, custom quote for cross-docking, container transloading, pallet storage, restacking, and 3PL fulfillment in Avenel, NJ near Port Newark.";
+  "Request a fast, custom quote for cross-docking, container transloading, pallet storage, restacking, and 3PL fulfillment in Carteret, NJ near Port Newark.";
 const OG_IMAGE = "/og-image.png?v=1";
 
 export const Route = createFileRoute("/quote")({
@@ -38,7 +38,7 @@ function QuotePage() {
             INSTANT DISPATCH RESPONSE
           </span>
           <span className="rounded-full border border-[#262626] bg-[#121212] px-3.5 py-1 font-mono text-[11px] uppercase tracking-wider text-[#aaaaaa]">
-            AVENEL, NJ FACILITY
+            CARTERET, NJ FACILITY
           </span>
         </div>
 
@@ -56,7 +56,7 @@ function QuotePage() {
           <div className="lg:col-span-7 rounded-2xl border border-[#262626] bg-[#121212] p-6 sm:p-10 shadow-2xl">
             <h2 className="text-xl font-bold font-mono text-white">Request Your Custom Quote</h2>
             <p className="mt-1 text-xs text-[#aaaaaa]">
-              Select your required logistics service and our operations desk in Avenel, NJ will respond promptly.
+              Select your required logistics service and our operations desk in Carteret, NJ will respond promptly.
             </p>
             <div className="mt-8">
               <ContactForm />
@@ -76,7 +76,7 @@ function QuotePage() {
               <div className="space-y-3">
                 {/* Email Dispatch Badge */}
                 <a
-                  href="mailto:ops@dulkufreight.com"
+                  href="mailto:info@dulkufreight.com"
                   className="group flex items-center gap-4 rounded-xl border border-[#262626] bg-[#161616] p-4 text-white transition-all duration-200 hover:border-[#F40009] hover:bg-[#F40009]/10"
                 >
                   <div className="flex h-10 w-10 items-center justify-center rounded-lg border border-[#F40009]/30 bg-[#F40009]/10 text-[#F40009] shrink-0">
@@ -87,18 +87,13 @@ function QuotePage() {
                       EMAIL DISPATCH
                     </span>
                     <span className="font-mono text-xs font-semibold text-white group-hover:text-[#F40009] transition-colors">
-                      ops@dulkufreight.com
+                      info@dulkufreight.com
                     </span>
                   </div>
                 </a>
 
                 {/* Address Badge */}
-                <a
-                  href="https://www.google.com/maps/search/?api=1&query=4+Engelhard+Ave,+Avenel,+NJ+07001"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group flex items-center gap-4 rounded-xl border border-[#262626] bg-[#161616] p-4 text-white transition-all duration-200 hover:border-[#F40009] hover:bg-[#F40009]/10"
-                >
+                <div className="group flex items-center gap-4 rounded-xl border border-[#262626] bg-[#161616] p-4 text-white">
                   <div className="flex h-10 w-10 items-center justify-center rounded-lg border border-[#F40009]/30 bg-[#F40009]/10 text-[#F40009] shrink-0">
                     <MapPin className="h-5 w-5" />
                   </div>
@@ -106,11 +101,11 @@ function QuotePage() {
                     <span className="font-mono text-[10px] uppercase tracking-wider text-[#888888]">
                       FACILITY ADDRESS
                     </span>
-                    <span className="text-xs font-medium text-white group-hover:text-[#F40009] transition-colors">
-                      4 Engelhard Ave, Avenel, NJ 07001
+                    <span className="text-xs font-medium text-white">
+                      Carteret, NJ
                     </span>
                   </div>
-                </a>
+                </div>
               </div>
             </div>
 

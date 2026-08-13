@@ -12,7 +12,7 @@ import { Truck, ShoppingBag, Warehouse, ShieldCheck, Zap, Layers, RefreshCw, Bar
 
 const TITLE = "Markets & Industries Served | Dulku Freight New Jersey";
 const DESCRIPTION =
-  "Dulku Freight delivers cross-docking, container transloading, warehouse storage, and 3PL fulfillment services in Avenel, NJ near Port Newark, supporting importers, trucking companies, freight forwarders, distributors, and eCommerce brands.";
+  "Dulku Freight delivers cross-docking, container transloading, warehouse storage, and 3PL fulfillment services in Carteret, NJ near Port Newark, supporting importers, trucking companies, freight forwarders, distributors, and eCommerce brands.";
 const OG_IMAGE = "/og-image.png?v=1";
 
 export const Route = createFileRoute("/markets")({
@@ -108,7 +108,7 @@ function MarketsPage() {
         image={marketsHero}
         imageAlt="Multi-industry freight logistics hub"
         metrics={[
-          { label: "Location", value: "Avenel, NJ" },
+          { label: "Location", value: "Carteret, NJ" },
           { label: "Industries", value: "Supply Chain" },
           { label: "Port Access", value: "Port Newark" },
         ]}
@@ -137,7 +137,7 @@ function MarketsPage() {
       {/* CTA */}
       <SubpageCtaSection
         title="Run the Numbers on Your Facility"
-        subtitle="Discuss your logistics requirements with our Avenel, NJ operations team today."
+        subtitle="Discuss your logistics requirements with our Carteret, NJ operations team today."
       />
     </main>
   );

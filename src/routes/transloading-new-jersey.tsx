@@ -40,7 +40,7 @@ function TransloadingPage() {
       title: "Port Drayage & Gate Entry",
       badge: "DRAYAGE",
       description:
-        "Steamship container is pulled from Port Newark or Elizabeth terminals and arrives at our Avenel, NJ transloading depot.",
+        "Steamship container is pulled from Port Newark or Elizabeth terminals and arrives at our Carteret, NJ transloading depot.",
       details: [
         "Port Newark proximity",
         "Inbound seal verification",
@@ -128,13 +128,13 @@ function TransloadingPage() {
     <main className="min-h-screen bg-[#09090b]">
       {/* Subpage Hero */}
       <SubpageHero
-        eyebrow="AVENEL, NJ TRANSLOADING FACILITY NEAR PORT NEWARK"
+        eyebrow="CARTERET, NJ TRANSLOADING FACILITY NEAR PORT NEWARK"
         title="Container-to-Truck Transloading Services in New Jersey"
         subtitle="Speed up your port-to-inland distribution. Dulku Freight offers container transloading, ocean-to-over-the-road transfers, intermodal cross-docking, and container weight reduction near Port Newark."
         image={transloadingHero}
         imageAlt="Dulku Freight Transloading Facility in New Jersey"
         metrics={[
-          { label: "Location", value: "Avenel, NJ" },
+          { label: "Location", value: "Carteret, NJ" },
           { label: "Core Service", value: "Transloading" },
           { label: "Port Access", value: "Port Newark" },
         ]}

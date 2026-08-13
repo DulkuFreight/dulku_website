@@ -13,6 +13,7 @@ import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { SiteHeader } from "../components/site/SiteHeader";
 import { SiteFooter } from "../components/site/SiteFooter";
+import { LanguageChoiceModal } from "../components/site/LanguageChoiceModal";
 
 
 function NotFoundComponent() {
@@ -77,7 +78,7 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
 
 const SITE_TITLE = "Dulku Freight | Cross Dock & Fulfillment";
 const SITE_DESCRIPTION =
-  "Dulku Freight delivers cross-docking, container transloading, warehouse storage, and 3PL fulfillment services in Avenel, NJ near Port Newark, supporting importers, trucking companies, freight forwarders, distributors, and eCommerce brands.";
+  "Dulku Freight delivers cross-docking, container transloading, warehouse storage, and 3PL fulfillment services in Carteret, NJ near Port Newark, supporting importers, trucking companies, freight forwarders, distributors, and eCommerce brands.";
 const SITE_OG_IMAGE = "/og-image.png?v=1";
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
@@ -132,14 +133,14 @@ function RootShell({ children }: { children: ReactNode }) {
     <html lang="en">
       <head>
         <title>Dulku Freight | Cross Dock &amp; Fulfillment</title>
-        <meta name="description" content="Dulku Freight delivers cross-docking, container transloading, warehouse storage, and 3PL fulfillment services in Avenel, NJ near Port Newark, supporting importers, trucking companies, freight forwarders, distributors, and eCommerce brands." />
+        <meta name="description" content="Dulku Freight delivers cross-docking, container transloading, warehouse storage, and 3PL fulfillment services in Carteret, NJ near Port Newark, supporting importers, trucking companies, freight forwarders, distributors, and eCommerce brands." />
         <meta property="og:title" content="Dulku Freight | Cross Dock &amp; Fulfillment" />
-        <meta property="og:description" content="Dulku Freight delivers cross-docking, container transloading, warehouse storage, and 3PL fulfillment services in Avenel, NJ near Port Newark, supporting importers, trucking companies, freight forwarders, distributors, and eCommerce brands." />
+        <meta property="og:description" content="Dulku Freight delivers cross-docking, container transloading, warehouse storage, and 3PL fulfillment services in Carteret, NJ near Port Newark, supporting importers, trucking companies, freight forwarders, distributors, and eCommerce brands." />
         <meta property="og:image" content="/og-image.png?v=1" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Dulku Freight | Cross Dock &amp; Fulfillment" />
-        <meta name="twitter:description" content="Dulku Freight delivers cross-docking, container transloading, warehouse storage, and 3PL fulfillment services in Avenel, NJ near Port Newark, supporting importers, trucking companies, freight forwarders, distributors, and eCommerce brands." />
+        <meta name="twitter:description" content="Dulku Freight delivers cross-docking, container transloading, warehouse storage, and 3PL fulfillment services in Carteret, NJ near Port Newark, supporting importers, trucking companies, freight forwarders, distributors, and eCommerce brands." />
         <meta name="twitter:image" content="/og-image.png?v=1" />
         <HeadContent />
         <link rel="icon" type="image/x-icon" href="/favicon.ico?v=6" />
@@ -167,6 +168,7 @@ function RootComponent() {
         <Outlet />
       </main>
       <SiteFooter />
+      <LanguageChoiceModal />
     </QueryClientProvider>
   );
 }

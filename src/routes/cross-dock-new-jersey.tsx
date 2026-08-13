@@ -15,7 +15,7 @@ import { Clock, ShieldCheck, Truck, Zap, Layers, RefreshCw, BarChart3, Box } fro
 
 const TITLE = "Cross-Docking Services New Jersey | Dulku Freight";
 const DESCRIPTION =
-  "Fast, reliable cross-docking services in Avenel, NJ near Port Newark & Port Elizabeth. Same-day transloading, freight consolidation, and outbound distribution for carriers, 3PLs, and importers.";
+  "Fast, reliable cross-docking services in Carteret, NJ near Port Newark & Port Elizabeth. Same-day transloading, freight consolidation, and outbound distribution for carriers, 3PLs, and importers.";
 const OG_IMAGE = "/og-image.png?v=1";
 
 export const Route = createFileRoute("/cross-dock-new-jersey")({
@@ -40,7 +40,7 @@ function CrossDockPage() {
       step: "01",
       title: "Inbound Trailer / Container Arrival",
       description:
-        "Truck arrives at our Avenel, NJ terminal. Inbound seal verification, piece count, and dock door assignment.",
+        "Truck arrives at our Carteret, NJ terminal. Inbound seal verification, piece count, and dock door assignment.",
       detail:
         "Priority dock levelers and high-capacity forklift unloading for palletized or floor-loaded freight.",
     },
@@ -140,13 +140,13 @@ function CrossDockPage() {
     <main className="min-h-screen bg-[#09090b]">
       {/* Immersive Subpage Hero */}
       <SubpageHero
-        eyebrow="AVENEL, NJ CROSS-DOCKING TERMINAL NEAR PORT NEWARK"
+        eyebrow="CARTERET, NJ CROSS-DOCKING TERMINAL NEAR PORT NEWARK"
         title="Same-Day Cross-Docking & Freight Transfer in New Jersey"
         subtitle="Eliminate warehouse dwell times and streamline your supply chain. Dulku Freight provides rapid cross-docking, cargo consolidation, and outbound re-routing just minutes from Port Newark and Port Elizabeth."
         image={crossDockHero}
         imageAlt="Dulku Freight Cross-Dock Facility in New Jersey"
         metrics={[
-          { label: "Location", value: "Avenel, NJ" },
+          { label: "Location", value: "Carteret, NJ" },
           { label: "Core Service", value: "Cross-Dock" },
           { label: "Port Corridor", value: "Port Newark" },
         ]}
@@ -169,7 +169,7 @@ function CrossDockPage() {
         dulkuTitle="Dulku Freight Dedicated Cross-Dock Terminal"
         dulkuPoints={[
           "Direct trailer-to-trailer freight cross-docking for fast turnaround",
-          "Strategic location in Avenel, NJ near Port Newark and Port Elizabeth",
+          "Strategic location in Carteret, NJ near Port Newark and Port Elizabeth",
           "Piece-count verification and cargo inspection upon dock arrival",
           "Responsive dock support for shifted loads, reworks, and urgent transfers",
         ]}
@@ -199,7 +199,7 @@ function CrossDockPage() {
       {/* Subpage CTA */}
       <SubpageCtaSection
         title="Need Immediate Cross-Docking in New Jersey?"
-        subtitle="Contact our dispatch desk in Avenel, NJ for fast rates, dock door availability, and immediate load scheduling."
+        subtitle="Contact our dispatch desk in Carteret, NJ for fast rates, dock door availability, and immediate load scheduling."
       />
     </main>
   );

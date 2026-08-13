@@ -49,7 +49,7 @@ export function ContactForm() {
       if (res && res.success) {
         setStatus("success");
       } else {
-        setErrorMessage("Failed to send request. Please try again or contact ops@dulkufreight.com directly.");
+        setErrorMessage("Failed to send request. Please try again or contact info@dulkufreight.com directly.");
         setStatus("error");
       }
     } catch (err: any) {
@@ -70,7 +70,7 @@ export function ContactForm() {
       }
 
       setErrorMessage(
-        err?.message || "Failed to send quote request. Please try again or contact ops@dulkufreight.com directly."
+        err?.message || "Failed to send quote request. Please try again or contact info@dulkufreight.com directly."
       );
       setStatus("error");
     }

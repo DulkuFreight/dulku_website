@@ -95,7 +95,7 @@ function GatePage() {
         image={gateEntry}
         imageAlt="Truck entering an automated gate lane"
         metrics={[
-          { label: "Location", value: "Avenel, NJ" },
+          { label: "Location", value: "Carteret, NJ" },
           { label: "Gate System", value: "Digital Check-In" },
           { label: "Port Access", value: "Port Newark" },
         ]}

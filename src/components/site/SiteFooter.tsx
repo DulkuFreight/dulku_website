@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Phone, Mail, MapPin, Building2, Navigation, FileText } from "lucide-react";
 import { Logo } from "./Logo";
+import { openLanguageModal } from "./LanguageChoiceModal";
 
 const SERVICES = [
   { label: "Cross-Docking", to: "/cross-dock-new-jersey" },
@@ -30,16 +31,16 @@ export function SiteFooter() {
 
             <div className="flex items-start gap-2.5 text-muted-foreground">
               <MapPin className="h-4 w-4 text-[#F40009] shrink-0 mt-0.5" />
-              <span>4 Engelhard Ave, Avenel, NJ 07001</span>
+              <span>Carteret, NJ</span>
             </div>
 
             <div className="flex items-center gap-2.5 text-muted-foreground">
               <Mail className="h-4 w-4 text-[#F40009] shrink-0" />
               <a
-                href="mailto:ops@dulkufreight.com"
+                href="mailto:info@dulkufreight.com"
                 className="hover:text-[#F40009] transition-colors text-foreground/90 font-mono"
               >
-                ops@dulkufreight.com
+                info@dulkufreight.com
               </a>
             </div>
           </div>
@@ -71,7 +72,6 @@ export function SiteFooter() {
           </p>
 
           <div className="space-y-3">
-
             {/* Request a Quote Button */}
             <Link
               to="/quote"
@@ -80,17 +80,6 @@ export function SiteFooter() {
               <FileText className="h-4 w-4" />
               <span>Request a Quote</span>
             </Link>
-
-            {/* Get Directions Button */}
-            <a
-              href="https://www.google.com/maps/search/?api=1&query=4+Engelhard+Ave,+Avenel,+NJ+07001"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex w-full items-center justify-center gap-2 rounded-md border border-input bg-background px-4 py-3 font-mono text-xs font-semibold uppercase tracking-wider text-foreground transition-colors hover:bg-accent hover:text-[#F40009]"
-            >
-              <Navigation className="h-4 w-4" />
-              <span>Get Directions</span>
-            </a>
           </div>
 
           {/* Bulleted inline summary list */}
@@ -102,16 +91,25 @@ export function SiteFooter() {
 
       {/* Bottom Bar (Separated by top border line) */}
       <div className="border-t border-border">
-        <div className="mx-auto flex max-w-7xl flex-col gap-2 px-5 py-6 font-mono text-[11px] uppercase tracking-[0.16em] text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
+        <div className="mx-auto flex max-w-7xl flex-col gap-3 px-5 py-6 font-mono text-[11px] uppercase tracking-[0.16em] text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
           <span>© 2026 Dulku Freight. All rights reserved.</span>
-          <a
-            href="https://dulkufreight.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-[#F40009] transition-colors"
-          >
-            dulkufreight.com
-          </a>
+          <div className="flex items-center gap-4">
+            <button
+              type="button"
+              onClick={openLanguageModal}
+              className="hover:text-[#F40009] transition-colors flex items-center gap-1.5 cursor-pointer lowercase first-letter:uppercase"
+            >
+              <span>🌐 Language / Idioma</span>
+            </button>
+            <a
+              href="https://dulkufreight.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[#F40009] transition-colors"
+            >
+              dulkufreight.com
+            </a>
+          </div>
         </div>
       </div>
     </footer>

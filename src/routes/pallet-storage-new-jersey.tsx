@@ -14,7 +14,7 @@ import { Warehouse, Lock, Database, Clock, ShieldCheck, Zap, Layers, MapPin } fr
 
 const TITLE = "Pallet Storage & Warehouse Warehousing New Jersey | Dulku Freight";
 const DESCRIPTION =
-  "Flexible short-term and long-term pallet storage in Avenel, NJ near Port Newark. Secure 3PL warehouse facility for importers & distributors.";
+  "Flexible short-term and long-term pallet storage in Carteret, NJ near Port Newark. Secure 3PL warehouse facility for importers & distributors.";
 const OG_IMAGE = "/og-image.png?v=1";
 
 export const Route = createFileRoute("/pallet-storage-new-jersey")({
@@ -64,7 +64,7 @@ function PalletStoragePage() {
       title: "Secure High-Bay Storage",
       badge: "PROTECTED STORAGE",
       description:
-        "Freight is safely stored in our monitored Avenel, NJ facility equipped with physical security controls.",
+        "Freight is safely stored in our monitored Carteret, NJ facility equipped with physical security controls.",
       details: [
         "Monitored facility & gated perimeter",
         "High-density pallet racking & bulk staging",
@@ -128,13 +128,13 @@ function PalletStoragePage() {
     <main className="min-h-screen bg-[#09090b]">
       {/* Subpage Hero */}
       <SubpageHero
-        eyebrow="AVENEL, NJ SECURE PALLET STORAGE & WAREHOUSING"
+        eyebrow="CARTERET, NJ SECURE PALLET STORAGE & WAREHOUSING"
         title="Short-Term & Long-Term Pallet Storage in New Jersey"
         subtitle="Need secure warehouse space near Port Newark? Dulku Freight offers flexible pallet storage, rack storage, and floor staging with facility security and organized inventory management."
         image={palletStorageHero}
         imageAlt="Dulku Freight Warehouse Pallet Storage Facility in New Jersey"
         metrics={[
-          { label: "Location", value: "Avenel, NJ" },
+          { label: "Location", value: "Carteret, NJ" },
           { label: "Storage Type", value: "Pallet Storage" },
           { label: "Facility Access", value: "Port Newark" },
         ]}
@@ -187,7 +187,7 @@ function PalletStoragePage() {
       {/* CTA */}
       <SubpageCtaSection
         title="Reserve Your Pallet Storage Space Today"
-        subtitle="Get an immediate per-pallet storage estimate and reserve warehouse space in Avenel, NJ."
+        subtitle="Get an immediate per-pallet storage estimate and reserve warehouse space in Carteret, NJ."
       />
     </main>
   );

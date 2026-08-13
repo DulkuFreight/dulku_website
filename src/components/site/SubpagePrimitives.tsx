@@ -79,7 +79,7 @@ export function SubpageHero({
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#F40009] opacity-75" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-[#F40009]" />
               </span>
-              AVENEL, NJ TERMINAL
+              CARTERET, NJ TERMINAL
             </span>
             {badges.map((b, i) => (
               <span
@@ -177,7 +177,7 @@ export function SubpageHero({
                         OPERATIONAL FACILITY
                       </p>
                       <p className="text-xs font-semibold text-white">
-                        4 Engelhard Ave, Avenel NJ
+                        Carteret, NJ
                       </p>
                     </div>
                   </div>
@@ -595,7 +595,7 @@ export function ContainerUnloadingServicesSection() {
               CONTAINER UNLOADING SERVICES
             </p>
             <h2 className="display-xl mt-3 text-3xl font-medium tracking-tight text-white sm:text-5xl">
-              Professional Ocean Container Unloading in Avenel, NJ
+              Professional Ocean Container Unloading in Carteret, NJ
             </h2>
             <p className="mt-4 text-base leading-relaxed text-[#aaaaaa] sm:text-lg">
               Dulku Freight provides ocean container unloading, floor-loaded cargo stripping, SKU sorting, and palletizing services near Port Newark and Port Elizabeth.
@@ -962,7 +962,7 @@ export function FulfillmentServicesSection() {
               3PL Order Fulfillment &amp; Distribution in New Jersey
             </h2>
             <p className="mt-4 text-base leading-relaxed text-[#aaaaaa] sm:text-lg">
-              Dulku Freight provides 3PL order fulfillment, manual pick and pack, kitting, and distribution services from our facility in Avenel, NJ.
+              Dulku Freight provides 3PL order fulfillment, manual pick and pack, kitting, and distribution services from our facility in Carteret, NJ.
             </p>
           </div>
         </Reveal>
@@ -1196,7 +1196,7 @@ export function PortConnectivitySection() {
             </h2>
 
             <p className="mt-4 text-sm sm:text-base leading-relaxed text-[#aaaaaa] max-w-3xl">
-              Located directly off I-95 at 4 Engelhard Ave, Avenel, NJ 07001, Dulku Freight provides rapid drayage turnarounds for ocean import containers and domestic dry vans.
+              Located directly off I-95 in Carteret, NJ, Dulku Freight provides rapid drayage turnarounds for ocean import containers and domestic dry vans.
             </p>
 
             <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -1333,7 +1333,7 @@ export function InteractiveRelatedServices({
 
 export function SubpageCtaSection({
   title = "Ready to Streamline Your New Jersey Freight Operations?",
-  subtitle = "Contact our dispatch team in Avenel, NJ for immediate pricing, dock availability, and emergency load support.",
+  subtitle = "Contact our dispatch team in Carteret, NJ for immediate pricing, dock availability, and emergency load support.",
 }: {
   title?: string;
   subtitle?: string;
@@ -1364,7 +1364,7 @@ export function SubpageCtaSection({
                       FACILITY ADDRESS
                     </p>
                     <p className="text-xs font-semibold text-white">
-                      4 Engelhard Ave, Avenel, NJ 07001
+                      Carteret, NJ
                     </p>
                   </div>
                 </div>

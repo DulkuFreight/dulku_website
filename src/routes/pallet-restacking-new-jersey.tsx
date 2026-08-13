@@ -14,7 +14,7 @@ import { RefreshCw, AlertTriangle, Clock, ShieldCheck, Zap, Layers, Box, Truck }
 
 const TITLE = "Pallet Restacking, Rework & Shifted Load Fix New Jersey | Dulku Freight";
 const DESCRIPTION =
-  "Emergency pallet restacking, shifted load correction, damaged freight rework, and re-palletizing services in Avenel, NJ near Port Newark for trucking lines.";
+  "Emergency pallet restacking, shifted load correction, damaged freight rework, and re-palletizing services in Carteret, NJ near Port Newark for trucking lines.";
 const OG_IMAGE = "/og-image.png?v=1";
 
 export const Route = createFileRoute("/pallet-restacking-new-jersey")({
@@ -40,7 +40,7 @@ function PalletRestackingPage() {
       title: "Dock Entry & Cargo Inspection",
       badge: "REWORK RECEIVING",
       description:
-        "Trucks with turned-away, shifted, or leaning freight gate into our Avenel, NJ dock bay. Our team inspects cargo condition before unloading.",
+        "Trucks with turned-away, shifted, or leaning freight gate into our Carteret, NJ dock bay. Our team inspects cargo condition before unloading.",
       details: [
         "Dock assignment for turned-away trucks",
         "Initial cargo inspection",
@@ -128,13 +128,13 @@ function PalletRestackingPage() {
     <main className="min-h-screen bg-[#09090b]">
       {/* Subpage Hero */}
       <SubpageHero
-        eyebrow="EMERGENCY PALLET REWORK & SHIFTED LOAD FIX IN AVENEL, NJ"
+        eyebrow="EMERGENCY PALLET REWORK & SHIFTED LOAD FIX IN CARTERET, NJ"
         title="Pallet Restacking, Load Rebalance & Cargo Rework in New Jersey"
         subtitle="Did your trailer load shift during transit or get rejected at a distribution center? Dulku Freight provides pallet restacking, load rebalancing, container re-palletizing, and shrink wrapping near Port Newark."
         image={palletRestackingHero}
         imageAlt="Dulku Freight Emergency Pallet Restacking in New Jersey"
         metrics={[
-          { label: "Location", value: "Avenel, NJ" },
+          { label: "Location", value: "Carteret, NJ" },
           { label: "Core Service", value: "Pallet Rework" },
           { label: "Facility Access", value: "Port Newark" },
         ]}
@@ -156,7 +156,7 @@ function PalletRestackingPage() {
         ]}
         dulkuTitle="Dulku Emergency Rework Terminal"
         dulkuPoints={[
-          "Dedicated dock bay access in Avenel, NJ near major transport corridors",
+          "Dedicated dock bay access in Carteret, NJ near major transport corridors",
           "Experienced warehouse teams who safely unstack and rebuild leaning cargo",
           "Pallet replacement, stretch wrapping, and corner guards",
           "Axle weight rebalancing for compliant highway transport",
@@ -187,7 +187,7 @@ function PalletRestackingPage() {
       {/* CTA */}
       <SubpageCtaSection
         title="Have a Shifted or Rejected Load Right Now?"
-        subtitle="Submit your request below for instant dock door assignment in Avenel, NJ."
+        subtitle="Submit your request below for instant dock door assignment in Carteret, NJ."
       />
     </main>
   );

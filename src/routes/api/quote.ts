@@ -38,82 +38,117 @@ export const Route = createFileRoute("/api/quote")({
             );
           }
 
-          const recipientEmail = "ops@dulkufreight.com";
-          const subject = "New Quote Request – Dulku Freight";
+          const recipientEmail = "info@dulkufreight.com";
+          const resendKey = process.env.RESEND_API_KEY;
+          const subject = `NEW WEBSITE QUOTE REQUEST – ${service.trim()} (${name.trim()})`;
 
-          const formattedText = `New Quote Request
+          const formattedText = `========================================
+NEW WEBSITE QUOTE REQUEST
+========================================
 
-Customer Information:
-Name: ${name.trim()}
-Company: ${company?.trim() || "N/A"}
-Email: ${email.trim()}
-Phone: ${phone.trim()}
+CUSTOMER INFORMATION:
+- Name: ${name.trim()}
+- Company: ${company?.trim() || "N/A"}
+- Phone: ${phone.trim()}
+- Email: ${email.trim()}
 
-Service Details:
-Requested Service: ${service.trim()}
+SERVICE DETAILS:
+- Requested Service: ${service.trim()}
+
+----------------------------------------
+Submitted via Dulku Freight Website Quote Form
 `;
 
+          const formattedHtml = `
+            <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #e0e0e0; border-radius: 8px;">
+              <h2 style="color: #F40009; margin-top: 0;">NEW WEBSITE QUOTE REQUEST</h2>
+              <p style="color: #666; font-size: 14px;">A new quote request has been submitted through the Dulku Freight website.</p>
+              <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;" />
+              <h3 style="color: #333; margin-bottom: 10px;">Customer Details</h3>
+              <table style="width: 100%; border-collapse: collapse;">
+                <tr>
+                  <td style="padding: 8px 0; color: #666; width: 140px;"><strong>Name:</strong></td>
+                  <td style="padding: 8px 0; color: #111;">${name.trim()}</td>
+                </tr>
+                <tr>
+                  <td style="padding: 8px 0; color: #666;"><strong>Company Name:</strong></td>
+                  <td style="padding: 8px 0; color: #111;">${company?.trim() || "N/A"}</td>
+                </tr>
+                <tr>
+                  <td style="padding: 8px 0; color: #666;"><strong>Phone:</strong></td>
+                  <td style="padding: 8px 0; color: #111;"><a href="tel:${phone.trim()}" style="color: #F40009;">${phone.trim()}</a></td>
+                </tr>
+                <tr>
+                  <td style="padding: 8px 0; color: #666;"><strong>Email:</strong></td>
+                  <td style="padding: 8px 0; color: #111;"><a href="mailto:${email.trim()}" style="color: #F40009;">${email.trim()}</a></td>
+                </tr>
+              </table>
+              <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;" />
+              <h3 style="color: #333; margin-bottom: 10px;">Service Requested</h3>
+              <p style="background: #f9f9f9; padding: 12px; border-left: 4px solid #F40009; font-size: 15px; font-weight: bold; color: #111; margin: 0;">
+                ${service.trim()}
+              </p>
+              <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;" />
+              <p style="font-size: 12px; color: #999; text-align: center; margin-bottom: 0;">
+                Dulku Freight Logistics • Operations Desk
+              </p>
+            </div>
+          `;
+
           let emailSent = false;
+          let errorDetail = "";
 
-          // Method A: Check for server-configured RESEND API KEY
-          const resendKey = process.env.RESEND_API_KEY;
-          const webhookUrl = process.env.QUOTE_WEBHOOK_URL;
-          const web3Key = process.env.WEB3FORMS_ACCESS_KEY;
-
+          // Send via Resend API
           if (resendKey) {
-            const res = await fetch("https://api.resend.com/emails", {
-              method: "POST",
-              headers: {
-                Authorization: `Bearer ${resendKey}`,
-                "Content-Type": "application/json",
-              },
-              body: JSON.stringify({
-                from: "Dulku Freight <quotes@dulkufreight.com>",
-                to: [recipientEmail],
-                subject: subject,
-                text: formattedText,
-              }),
-            });
-            if (res.ok) {
-              emailSent = true;
-            }
-          } else if (webhookUrl) {
-            const res = await fetch(webhookUrl, {
-              method: "POST",
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify({
-                to: recipientEmail,
-                subject: subject,
-                text: formattedText,
-                data: { name, company, phone, email, service },
-              }),
-            });
-            if (res.ok) {
-              emailSent = true;
-            }
-          }
+            try {
+              const res = await fetch("https://api.resend.com/emails", {
+                method: "POST",
+                headers: {
+                  Authorization: `Bearer ${resendKey}`,
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                  from: "Dulku Freight <quotes@dulkufreight.com>",
+                  to: [recipientEmail],
+                  reply_to: email.trim(),
+                  subject: subject,
+                  text: formattedText,
+                  html: formattedHtml,
+                }),
+              });
 
-          // Fallback server dispatch via Web3Forms API to recipient email
-          if (!emailSent) {
-            const gatewayRes = await fetch("https://api.web3forms.com/submit", {
-              method: "POST",
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify({
-                access_key: web3Key || "a29e2fa8-ef37-4d76-8804-03a15ecf36fa",
-                subject: subject,
-                from_name: "Dulku Freight Quote Form",
-                to_email: recipientEmail,
-                name: name.trim(),
-                company: company?.trim() || "N/A",
-                email: email.trim(),
-                phone: phone.trim(),
-                service: service.trim(),
-                message: formattedText,
-              }),
-            });
-            const gatewayData = await gatewayRes.json().catch(() => null);
-            if (gatewayRes.ok || (gatewayData && gatewayData.success)) {
-              emailSent = true;
+              const resData = await res.json().catch(() => null);
+
+              if (res.ok && resData?.id) {
+                emailSent = true;
+              } else {
+                // Fallback sender option
+                const fallbackRes = await fetch("https://api.resend.com/emails", {
+                  method: "POST",
+                  headers: {
+                    Authorization: `Bearer ${resendKey}`,
+                    "Content-Type": "application/json",
+                  },
+                  body: JSON.stringify({
+                    from: "Dulku Freight Quotes <info@dulkufreight.com>",
+                    to: [recipientEmail],
+                    reply_to: email.trim(),
+                    subject: subject,
+                    text: formattedText,
+                    html: formattedHtml,
+                  }),
+                });
+                const fallbackData = await fallbackRes.json().catch(() => null);
+                if (fallbackRes.ok && fallbackData?.id) {
+                  emailSent = true;
+                } else {
+                  errorDetail = resData?.message || fallbackData?.message || "Resend API error";
+                  console.error("Resend API error:", resData || fallbackData);
+                }
+              }
+            } catch (e: any) {
+              errorDetail = e?.message || "Network exception";
+              console.error("Resend fetch error:", e);
             }
           }
 
@@ -133,8 +168,7 @@ Requested Service: ${service.trim()}
             return new Response(
               JSON.stringify({
                 success: false,
-                error:
-                  "Failed to send request. Please try again or contact ops@dulkufreight.com directly.",
+                error: `Failed to send request (${errorDetail}). Please try again or contact info@dulkufreight.com directly.`,
               }),
               {
                 status: 500,
@@ -142,7 +176,7 @@ Requested Service: ${service.trim()}
               }
             );
           }
-        } catch (err) {
+        } catch (err: any) {
           console.error("Quote API Error:", err);
           return new Response(
             JSON.stringify({

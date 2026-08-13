@@ -14,7 +14,7 @@ import { ShoppingBag, PackageCheck, BarChart3, Clock, ShieldCheck, Zap, Layers, 
 
 const TITLE = "3PL Fulfillment & Distribution Services New Jersey | Dulku Freight";
 const DESCRIPTION =
-  "3PL fulfillment, pick & pack, inventory management, and B2B/eCommerce distribution services in Avenel, NJ near Port Newark.";
+  "3PL fulfillment, pick & pack, inventory management, and B2B/eCommerce distribution services in Carteret, NJ near Port Newark.";
 const OG_IMAGE = "/og-image.png?v=1";
 
 export const Route = createFileRoute("/fulfillment-new-jersey")({
@@ -40,7 +40,7 @@ function FulfillmentPage() {
       title: "Inbound Receiving & Stocking",
       badge: "RECEIVING",
       description:
-        "Freight or cartons arrive at our Avenel, NJ facility. Cargo is checked in and placed into designated warehouse locations.",
+        "Freight or cartons arrive at our Carteret, NJ facility. Cargo is checked in and placed into designated warehouse locations.",
       details: [
         "Inbound SKU verification",
         "Carton count check",
@@ -118,7 +118,7 @@ function FulfillmentPage() {
     },
     {
       title: "Northeast Regional Hub Access",
-      description: "Strategic Avenel, NJ location near major transportation hubs and shipping routes.",
+      description: "Strategic Carteret, NJ location near major transportation hubs and shipping routes.",
       icon: Truck,
       tag: "REGIONAL HUB",
     },
@@ -128,13 +128,13 @@ function FulfillmentPage() {
     <main className="min-h-screen bg-[#09090b]">
       {/* Subpage Hero */}
       <SubpageHero
-        eyebrow="AVENEL, NJ 3PL FULFILLMENT & DISTRIBUTION HUB"
+        eyebrow="CARTERET, NJ 3PL FULFILLMENT & DISTRIBUTION HUB"
         title="3PL Warehouse Fulfillment & Order Distribution in New Jersey"
-        subtitle="Scale your business distribution. Dulku Freight provides 3PL order fulfillment, pick and pack, kitting, prep, and freight shipping from Avenel, NJ."
+        subtitle="Scale your business distribution. Dulku Freight provides 3PL order fulfillment, pick and pack, kitting, prep, and freight shipping from Carteret, NJ."
         image={fulfillmentHero}
         imageAlt="Dulku Freight 3PL Fulfillment Operations in New Jersey"
         metrics={[
-          { label: "Location", value: "Avenel, NJ" },
+          { label: "Location", value: "Carteret, NJ" },
           { label: "Core Service", value: "3PL Fulfillment" },
           { label: "Access", value: "Port Newark" },
         ]}
@@ -187,7 +187,7 @@ function FulfillmentPage() {
       {/* CTA */}
       <SubpageCtaSection
         title="Request a Custom 3PL Fulfillment Proposal"
-        subtitle="Get a customized order fulfillment and warehousing proposal for your business from our Avenel, NJ operations desk."
+        subtitle="Get a customized order fulfillment and warehousing proposal for your business from our Carteret, NJ operations desk."
       />
     </main>
   );

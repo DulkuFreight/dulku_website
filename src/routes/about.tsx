@@ -12,7 +12,7 @@ import { ShieldCheck, Zap, Layers, Truck, MapPin, BarChart3, Warehouse, Clock } 
 
 const TITLE = "About Dulku Freight | Port Newark Cross-Dock & Logistics";
 const DESCRIPTION =
-  "Dulku Freight delivers cross-docking, container transloading, warehouse storage, and 3PL fulfillment services in Avenel, NJ near Port Newark, supporting importers, trucking companies, freight forwarders, distributors, and eCommerce brands.";
+  "Dulku Freight delivers cross-docking, container transloading, warehouse storage, and 3PL fulfillment services in Carteret, NJ near Port Newark, supporting importers, trucking companies, freight forwarders, distributors, and eCommerce brands.";
 const OG_IMAGE = "/og-image.png?v=1";
 
 export const Route = createFileRoute("/about")({
@@ -102,13 +102,13 @@ function AboutPage() {
     <main className="min-h-screen bg-[#09090b]">
       {/* Subpage Hero */}
       <SubpageHero
-        eyebrow="ABOUT DULKU FREIGHT • AVENEL, NJ"
+        eyebrow="ABOUT DULKU FREIGHT • CARTERET, NJ"
         title="Modern Freight Logistics & Terminal Execution"
-        subtitle="Dulku Freight provides cross-docking, container transloading, pallet storage, and 3PL fulfillment services from our facility in Avenel, NJ near Port Newark."
+        subtitle="Dulku Freight provides cross-docking, container transloading, pallet storage, and 3PL fulfillment services from our facility in Carteret, NJ near Port Newark."
         image={aboutHero}
         imageAlt="Logistics terminal overview"
         metrics={[
-          { label: "Location", value: "Avenel, NJ" },
+          { label: "Location", value: "Carteret, NJ" },
           { label: "Core Service", value: "Cross-Dock & 3PL" },
           { label: "Port Access", value: "Port Newark" },
         ]}

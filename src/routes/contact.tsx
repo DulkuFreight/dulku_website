@@ -5,7 +5,7 @@ import { Phone, Mail, MapPin, Clock, ShieldCheck, Zap } from "lucide-react";
 
 const TITLE = "Contact Operations Desk | Dulku Freight New Jersey";
 const DESCRIPTION =
-  "Contact Dulku Freight operations desk in Avenel, NJ for fast rates, emergency shifted load support, container transloading, and warehousing.";
+  "Contact Dulku Freight operations desk in Carteret, NJ for fast rates, emergency shifted load support, container transloading, and warehousing.";
 const OG_IMAGE = "/og-image.png?v=1";
 
 export const Route = createFileRoute("/contact")({
@@ -44,17 +44,12 @@ function ContactPage() {
             </h1>
 
             <p className="mt-6 text-base leading-relaxed text-[#aaaaaa] sm:text-lg">
-              Have an urgent shifted load, rejected freight, or ocean container on chassis right now? Reach out to our Avenel, NJ dispatch team for immediate bay assignment.
+              Have an urgent shifted load, rejected freight, or ocean container on chassis right now? Reach out to our Carteret, NJ dispatch team for immediate bay assignment.
             </p>
 
             <div className="mt-8 space-y-4">
               {/* Address Badge */}
-              <a
-                href="https://www.google.com/maps/search/?api=1&query=4+Engelhard+Ave,+Avenel,+NJ+07001"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex items-center gap-4 rounded-xl border border-[#262626] bg-[#121212] p-4 text-white transition-all hover:border-[#F40009] hover:bg-[#181818]"
-              >
+              <div className="group flex items-center gap-4 rounded-xl border border-[#262626] bg-[#121212] p-4 text-white">
                 <div className="flex h-10 w-10 items-center justify-center rounded-lg border border-[#F40009]/30 bg-[#F40009]/10 text-[#F40009] shrink-0">
                   <MapPin className="h-5 w-5" />
                 </div>
@@ -62,15 +57,15 @@ function ContactPage() {
                   <p className="font-mono text-[10px] uppercase tracking-wider text-[#888888]">
                     FACILITY ADDRESS
                   </p>
-                  <p className="text-sm font-semibold text-white group-hover:text-[#F40009] transition-colors">
-                    4 Engelhard Ave, Avenel, NJ 07001
+                  <p className="text-sm font-semibold text-white">
+                    Carteret, NJ
                   </p>
                 </div>
-              </a>
+              </div>
 
               {/* Email Badge */}
               <a
-                href="mailto:ops@dulkufreight.com"
+                href="mailto:info@dulkufreight.com"
                 className="group flex items-center gap-4 rounded-xl border border-[#262626] bg-[#121212] p-4 text-white transition-all hover:border-[#F40009] hover:bg-[#181818]"
               >
                 <div className="flex h-10 w-10 items-center justify-center rounded-lg border border-[#F40009]/30 bg-[#F40009]/10 text-[#F40009] shrink-0">
@@ -81,7 +76,7 @@ function ContactPage() {
                     EMAIL DISPATCH
                   </p>
                   <p className="font-mono text-sm font-semibold text-white group-hover:text-[#F40009] transition-colors">
-                    ops@dulkufreight.com
+                    info@dulkufreight.com
                   </p>
                 </div>
               </a>
